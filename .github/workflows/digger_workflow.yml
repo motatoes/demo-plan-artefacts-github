@@ -33,9 +33,9 @@ jobs:
         with:
           disable-locking: true
           no-backend: true
+          upload-plan-destination: gcp
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_STORAGE_BUCKET: gcp-plan-artefacts
-          PLAN_UPLOAD_DESTINATION: gcp
 
