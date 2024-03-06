@@ -21,19 +21,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: digger run
-        uses: diggerhq/digger@v0.4.6
-
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
           create_credentials_file: true
 
+
+      - name: digger run
+        uses: diggerhq/digger@v0.4.6
         with:
           disable-locking: true
           no-backend: true
-
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
