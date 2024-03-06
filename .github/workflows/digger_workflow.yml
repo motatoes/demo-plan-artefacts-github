@@ -29,7 +29,7 @@ jobs:
 
 
       - name: digger run
-        uses: diggerhq/digger@v0.4.6
+        uses: diggerhq/digger@feat/plan-artefacts-gcp-implementation
         with:
           disable-locking: true
           no-backend: true
