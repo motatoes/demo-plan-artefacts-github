@@ -24,6 +24,7 @@ jobs:
       - name: digger run
         uses: diggerhq/digger@feat/plan-artefacts-gcp-implementation
         with:
+          setup-terraform: true
           setup-aws: false
           disable-locking: true
           no-backend: true
