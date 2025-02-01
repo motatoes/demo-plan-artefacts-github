@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: digger run
-        uses: diggerhq/digger@feat/plan-artefacts-gcp-implementation
+        uses: diggerhq/digger@fix/github-upload-artefacts
         with:
           setup-terraform: true
           setup-aws: false
